@@ -1,0 +1,62 @@
+img{
+    width: 200px;
+    /* you can scale a vector image, larger or smaller, and it will always look good (unlike a bitmap image, which will blur if you make it larger */
+}
+
+/* this hover state will change the colour of the circle when you hover over the svg */
+.svgOne:hover .cHover{
+    fill: chartreuse;
+    stroke: navajowhite;
+    stroke-width: 4px;
+    /* in HTML, with CSS, you don't have to define units, because everything is pixels, but in CSS, you can use any uniy, so you have to define them */
+}
+
+/* add a transition property to each group of circles */
+.circ{
+    transition: all 1s ease-in-out;
+
+    /* change the transform origin to the centre of the svg, so the circles will rotate around the centre */
+    transform-origin: 50% 50%;
+}
+
+/* rotate the group of circles, to make a circle of 12 circles */
+.circles:hover .c-30{
+    transform: rotate(30deg);
+}
+
+.circles:hover .c-60{
+    transform: rotate(60deg);
+}
+
+
+/* style the hamster we embedded as an SVG */
+.bodyColour{
+    fill: thistle;
+}
+
+.eye{
+    fill: red;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+/* use CSS shapes - clipping masks - to make an element appear like a shpe then use shape-outside to make it act like that shape */
+.clip-me{
+    width: 200px;
+    height: 200px;
+    background-color: peru;
+
+    /* a clipping maks defines a path that creates a shape */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+    /* if we float this shape, the text will wrap around it */
+    float: left;
+
+    /* shape-outside tells the shape out how to behave, and lets text wrap around a shape */
+    shape-outside: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+section{
+    width: 400px;
+    font-size: 24px;
+}
